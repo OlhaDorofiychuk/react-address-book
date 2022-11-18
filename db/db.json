@@ -15,41 +15,21 @@
       "city": "London"
     },
     {
-      "id": 3
-    },
-    {
       "firstName": "Olya",
       "lastName": "Ok",
       "city": "London",
       "id": 4
     },
+
     {
       "firstName": "Olya",
-      "lastName": "Ok",
-      "city": "London",
-      "id": 5
-    },
-    {
-      "firstName": "Olya",
-      "lastName": "Ok",
-      "city": "London",
-      "id": 6
-    },
-    {
-      "firstName": "Olya",
-      "lastName": "Ok",
-      "city": "London",
-      "id": 7
-    },
-    {
-      "firstName": "ok",
       "lastName": "dorofiychuk",
-      "id": 8
-    },
-    {
-      "firstName": "ok",
-      "lastName": "dorofiychuk",
-      "id": 9
+      "street": "Abingdon",
+      "city": "London",
+      "email": "olha.d@yahoo.com",
+      "linkedin": "bls",
+      "twitter": "dg",
+      "id": 20
     }
   ]
 }

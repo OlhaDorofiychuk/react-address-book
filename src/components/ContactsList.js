@@ -3,7 +3,7 @@ import { Link, useSearchParams } from "react-router-dom";
 
 function ContactsList(props) {
   //"contacts" must be passed as prop to this component
-  const { contacts } = props;
+  const { contacts, contactUrlId } = props;
 
   return (
     <>
@@ -20,7 +20,7 @@ function ContactsList(props) {
               </p>
               <p>
                 {/** TODO: Make a Link here to view contact */}
-                <Link to="/view">View</Link>
+                <Link to={`/contacts/${contact.id}`}>View</Link>
               </p>
             </li>
           );
