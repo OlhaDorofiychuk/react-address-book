@@ -9,11 +9,11 @@ export default function App() {
   const [contacts, setContacts] = useState([]);
 
   useEffect(() => {
-    fetch("localhost:4000/contacts")
+    fetch("http://localhost:4000/contacts")
       .then((res) => res.json())
       .then((contactData) => setContacts(contactData));
   }, []);
-
+  console.log("contacts:", contacts);
   //TODO: Load all contacts on useEffect when component first renders
 
   return (
@@ -31,10 +31,11 @@ export default function App() {
         </ul>
       </nav>
       <main>
+        {/*  path={`/view/:${contactUrlId}`}*/}
         <Routes>
-          <Route path="/" element={<ContactsList />} />
+          <Route path="/" element={<ContactsList contacts={contacts} />} />
           <Route path="/add" element={<ContactsAdd />} />
-          <Route path="/view/:id" element={<ContactsView />} />
+          <Route element={<ContactsView />} />
         </Routes>
       </main>
     </>
