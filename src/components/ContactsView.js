@@ -10,7 +10,11 @@ function ContactsView() {
   //TODO: Get the contact to load from the params and fetch.
   //With useEffect, load the contact when params changes
   //and update contact state
-
+  function deleteContact() {
+    fetch(`http://localhost:4000/contacts/${contactUrlId.id}`, {
+      method: "DELETE",
+    }).then(() => this.setContacts({ status: "Delete succssful" }));
+  }
   useEffect(() => {
     fetch(`http://localhost:4000/contacts/${contactUrlId.id}`)
       .then((res) => res.json())
@@ -34,6 +38,7 @@ function ContactsView() {
       </p>
       <p>{contact.linkedin}</p>
       <p>{contact.twitter}</p>
+      <button onClick={deleteContact}>Delete</button>
     </div>
   );
 }

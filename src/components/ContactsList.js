@@ -3,7 +3,7 @@ import { Link, useSearchParams } from "react-router-dom";
 
 function ContactsList(props) {
   //"contacts" must be passed as prop to this component
-  const { contacts, contactUrlId } = props;
+  const { contacts, setContacts, contactUrlId } = props;
 
   return (
     <>
