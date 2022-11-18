@@ -4,7 +4,7 @@ import { Link, useSearchParams } from "react-router-dom";
 function ContactsList(props) {
   //"contacts" must be passed as prop to this component
   const { contacts, setContacts, contactUrlId } = props;
-
+  console.log(contacts);
   return (
     <>
       <header>
@@ -16,7 +16,7 @@ function ContactsList(props) {
         </b>
         <b>
           <label>
-            <input name="type" type="checkbox" value="personal" /> Personal
+            <input name="type" type="checkbox" value="personal" /> Work
           </label>
         </b>
       </header>

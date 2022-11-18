@@ -5,7 +5,6 @@ function ContactsView() {
   const [contact, setContact] = useState(false);
   const location = useLocation();
   const contactUrlId = useParams();
-  console.log(contactUrlId);
 
   //TODO: Get the contact to load from the params and fetch.
   //With useEffect, load the contact when params changes
@@ -37,10 +36,11 @@ function ContactsView() {
         {contact.street} {contact.city}
       </p>
       <p>
-        <b>{contact.email}</b>
+        <b>Email:</b>
+        {contact.email ? contact.email : "No email provided"}
       </p>
-      <p>{contact.linkedin}</p>
-      <p>{contact.twitter}</p>
+      <p>{contact.linkedin ? contact.linkedin : "N/A"}</p>
+      <p>{contact.twitter ? contact.twitter : "N/A"}</p>
       <button onClick={deleteContact}>Delete</button>
       <button onClick={edit}>Edit</button>
     </div>

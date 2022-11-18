@@ -16,7 +16,17 @@ export default function App() {
   }, []);
   console.log("contacts:", contacts);
   //TODO: Load all contacts on useEffect when component first renders
+  //contacts/?type"
 
+  let workContacts = [];
+  let personalContacts = [];
+
+  contacts.map((contact) => {
+    if (contact.type === "work") return workContacts.push(contact);
+    if (contact.type === "personal") return personalContacts.push(contact);
+  });
+  console.log("work", workContacts);
+  console.log("personal", personalContacts);
   return (
     <>
       <nav>
@@ -41,7 +51,15 @@ export default function App() {
             }
           />
           <Route path="/contacts/:id" element={<ContactsView />} />
-          <Route path="/contacts/?type" element={<ContactsByType />} />
+          <Route
+            path="/"
+            element={
+              <ContactsByType
+                workContacts={workContacts}
+                personalContacts={personalContacts}
+              />
+            }
+          />
         </Routes>
       </main>
     </>

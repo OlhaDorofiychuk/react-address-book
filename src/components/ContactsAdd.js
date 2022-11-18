@@ -131,7 +131,6 @@ function ContactsAdd(props) {
         id="email"
         name="email"
         type="email"
-        required
         value={newPerson.email}
         onChange={handleChange}
       />
@@ -141,7 +140,6 @@ function ContactsAdd(props) {
         id="linkedin"
         name="linkedin"
         type="text"
-        required
         value={newPerson.linkedin}
         onChange={handleChange}
       />
@@ -151,7 +149,6 @@ function ContactsAdd(props) {
         id="twitter"
         name="twitter"
         type="text"
-        required
         value={newPerson.twitter}
         onChange={handleChange}
       />

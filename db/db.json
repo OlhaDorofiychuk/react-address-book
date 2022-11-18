@@ -69,6 +69,32 @@
         "personal"
       ],
       "id": 9
+    },
+    {
+      "firstName": "Juraj",
+      "lastName": "dorofiychuk",
+      "street": "Abingdon",
+      "city": "London",
+      "email": "olha.d@yahoo.com",
+      "linkedin": "ggg",
+      "twitter": "llllllllllllllllllll",
+      "type": [
+        "personal"
+      ],
+      "id": 10
+    },
+    {
+      "firstName": "Olya",
+      "lastName": "dorofiychuk",
+      "street": "Abingdon",
+      "city": "London",
+      "email": "olha.d@yahoo.com",
+      "linkedin": "bls",
+      "twitter": "cc",
+      "type": [
+        "personal"
+      ],
+      "id": 11
     }
   ]
 }
