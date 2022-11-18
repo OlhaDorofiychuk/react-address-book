@@ -9,6 +9,16 @@ function ContactsList(props) {
     <>
       <header>
         <h2>Contacts</h2>
+        <b>
+          <label>
+            <input name="type" type="checkbox" value="personal" /> Personal
+          </label>
+        </b>
+        <b>
+          <label>
+            <input name="type" type="checkbox" value="personal" /> Personal
+          </label>
+        </b>
       </header>
       <ul className="contacts-list">
         {contacts.map((contact, index) => {
@@ -19,7 +29,6 @@ function ContactsList(props) {
                 {firstName} {lastName}
               </p>
               <p>
-                {/** TODO: Make a Link here to view contact */}
                 <Link to={`/contacts/${contact.id}`}>View</Link>
               </p>
             </li>

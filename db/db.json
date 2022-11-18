@@ -16,13 +16,59 @@
     },
     {
       "firstName": "Olya",
+      "lastName": "Dorofiychuk",
+      "street": "Abingdon",
+      "city": "London",
+      "email": "olha.d@yahoo.com",
+      "linkedin": "bls",
+      "twitter": "ddd",
+      "id": 3
+    },
+    {
+      "firstName": "Olya",
+      "lastName": "Dorofiychuk",
+      "street": "Abingdon",
+      "city": "London",
+      "email": "olha.d@yahoo.com",
+      "linkedin": "bls",
+      "twitter": "ddd",
+      "type": [],
+      "id": 4
+    },
+    {
+      "firstName": "Victor",
       "lastName": "dorofiychuk",
       "street": "Abingdon",
       "city": "London",
       "email": "olha.d@yahoo.com",
       "linkedin": "bls",
-      "twitter": "dg",
-      "id": 20
+      "twitter": "llllllllllllllllllll",
+      "type": [],
+      "id": 6
+    },
+    {
+      "firstName": "Olga",
+      "lastName": "Dorofiychuk",
+      "street": "Abingdon",
+      "city": "London",
+      "email": "olha.d@yahoo.com",
+      "linkedin": "bls",
+      "twitter": "llllllllllllllllllll",
+      "type": [],
+      "id": 7
+    },
+    {
+      "firstName": "Olga",
+      "lastName": "Dorofiychuk",
+      "street": "Abingdon",
+      "city": "London",
+      "email": "olha.d@yahoo.com",
+      "linkedin": "ggg",
+      "twitter": "ddd",
+      "type": [
+        "personal"
+      ],
+      "id": 9
     }
   ]
 }

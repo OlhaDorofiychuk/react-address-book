@@ -9,6 +9,7 @@ const initialFormState = {
   email: "",
   linkedin: "",
   twitter: "",
+  type: [],
 };
 
 function ContactsAdd(props) {
@@ -37,6 +38,7 @@ function ContactsAdd(props) {
         email: newPerson.email,
         linkedin: newPerson.linkedin,
         twitter: newPerson.twitter,
+        type: newPerson.type,
       }),
     })
       .then((response) => response.json())
@@ -51,6 +53,8 @@ function ContactsAdd(props) {
   const handleChange = (event) => {
     const value = event.target.value;
     const name = event.target.name;
+    const type = event.target.type;
+    const checked = event.target.checked;
 
     if (name === "firstName") {
       setNewPerson({ ...newPerson, firstName: value });
@@ -73,7 +77,11 @@ function ContactsAdd(props) {
     if (name === "twitter") {
       setNewPerson({ ...newPerson, twitter: value });
     }
+    if (name === "type" && type === "checkbox") {
+      return setNewPerson({ ...newPerson, type: [...newPerson.type, value] });
+    }
   };
+
   console.log(newPerson);
   return (
     <form onSubmit={handleSubmit} className="form-stack contact-form">
@@ -147,6 +155,33 @@ function ContactsAdd(props) {
         value={newPerson.twitter}
         onChange={handleChange}
       />
+
+      <label>
+        <input
+          className="typeOfContact work"
+          id="work"
+          name="type"
+          type="checkbox"
+          value="work"
+          checked={newPerson.type.includes("work")}
+          onChange={handleChange}
+        />
+        Work
+      </label>
+
+      <label htmlFor="type">
+        <input
+          className="typeOfContact personal"
+          id="personal"
+          name="type"
+          type="checkbox"
+          value="personal"
+          checked={newPerson.type.includes("personal")}
+          onChange={handleChange}
+        />
+        Personal
+      </label>
+
       <div className="actions-section">
         <button className="button blue" type="submit">
           Create
