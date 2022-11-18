@@ -36,8 +36,6 @@ function ContactsAdd(props) {
       .then((response) => response.json())
       .then((newData) => setContacts({ ...contacts, newData }));
     console.log(newData);
-
-    /* do stuff with the response data */
   };
 
   const handleChange = (event) => {
