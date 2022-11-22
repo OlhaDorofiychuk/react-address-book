@@ -8,23 +8,6 @@
       "city": "London"
     },
     {
-      "id": 2,
-      "firstName": "Grace",
-      "lastName": "Hopper",
-      "street": "32 Deebug Road",
-      "city": "London"
-    },
-    {
-      "firstName": "Olya",
-      "lastName": "Dorofiychuk",
-      "street": "Abingdon",
-      "city": "London",
-      "email": "olha.d@yahoo.com",
-      "linkedin": "bls",
-      "twitter": "ddd",
-      "id": 3
-    },
-    {
       "firstName": "Olya",
       "lastName": "Dorofiychuk",
       "street": "Abingdon",
@@ -34,41 +17,6 @@
       "twitter": "ddd",
       "type": [],
       "id": 4
-    },
-    {
-      "firstName": "Victor",
-      "lastName": "dorofiychuk",
-      "street": "Abingdon",
-      "city": "London",
-      "email": "olha.d@yahoo.com",
-      "linkedin": "bls",
-      "twitter": "llllllllllllllllllll",
-      "type": [],
-      "id": 6
-    },
-    {
-      "firstName": "Olga",
-      "lastName": "Dorofiychuk",
-      "street": "Abingdon",
-      "city": "London",
-      "email": "olha.d@yahoo.com",
-      "linkedin": "bls",
-      "twitter": "llllllllllllllllllll",
-      "type": [],
-      "id": 7
-    },
-    {
-      "firstName": "Olga",
-      "lastName": "Dorofiychuk",
-      "street": "Abingdon",
-      "city": "London",
-      "email": "olha.d@yahoo.com",
-      "linkedin": "ggg",
-      "twitter": "ddd",
-      "type": [
-        "personal"
-      ],
-      "id": 9
     },
     {
       "firstName": "Juraj",
@@ -95,6 +43,192 @@
         "personal"
       ],
       "id": 11
+    },
+    {
+      "firstName": "Work",
+      "lastName": "Dorofiychuk",
+      "street": "Abingdon",
+      "city": "London",
+      "email": "olha.d@yahoo.com",
+      "linkedin": "bls",
+      "twitter": "",
+      "type": [
+        "work"
+      ],
+      "id": 12
+    },
+    {
+      "firstName": "Juraj",
+      "lastName": "work",
+      "street": "Abingdon",
+      "city": "London",
+      "email": "olha.d@yahoo.com",
+      "linkedin": "ggg",
+      "twitter": "cc",
+      "type": [
+        "work"
+      ],
+      "id": 15
+    },
+    {
+      "firstName": "Juraj",
+      "lastName": "personal",
+      "street": "Abingdon",
+      "city": "London",
+      "email": "olha.d@yahoo.com",
+      "linkedin": "",
+      "twitter": "",
+      "type": [
+        "personal"
+      ],
+      "id": 16
+    },
+    {
+      "firstName": "Juraj",
+      "lastName": "dorofiychuk",
+      "street": "abbingdon",
+      "city": "London",
+      "email": "",
+      "linkedin": "",
+      "twitter": "",
+      "type": [
+        "work"
+      ],
+      "id": 17
+    },
+    {
+      "firstName": "Juraj",
+      "lastName": "Dorofiychuk",
+      "street": "Abingdon",
+      "city": "London",
+      "email": "",
+      "linkedin": "",
+      "twitter": "",
+      "type": [
+        "work"
+      ],
+      "id": 19
+    },
+    {
+      "firstName": "Olya",
+      "lastName": "Dorofiychuk",
+      "street": "Abingdon",
+      "city": "London",
+      "email": "",
+      "linkedin": "",
+      "twitter": "",
+      "type": [
+        "work"
+      ],
+      "id": 21
+    },
+    {
+      "firstName": "Olya",
+      "lastName": "Dorofiychuk",
+      "street": "Abingdon",
+      "city": "London",
+      "email": "",
+      "linkedin": "",
+      "twitter": "",
+      "type": [
+        "personal"
+      ],
+      "id": 22
+    },
+    {
+      "firstName": "Victor",
+      "lastName": "Dorofiychuk",
+      "street": "Abingdon",
+      "city": "London",
+      "email": "olha.d@yahoo.com",
+      "linkedin": "",
+      "twitter": "",
+      "type": [
+        "personal"
+      ],
+      "id": 23
+    },
+    {
+      "firstName": "Juraj",
+      "lastName": "dorofiychuk",
+      "street": "Abingdon",
+      "city": "London",
+      "email": "",
+      "linkedin": "",
+      "twitter": "",
+      "type": [
+        "work"
+      ],
+      "id": 25
+    },
+    {
+      "firstName": "Victor",
+      "lastName": "Dorofiychuk",
+      "street": "Abingdon",
+      "city": "London",
+      "email": "olha.d@yahoo.com",
+      "linkedin": "",
+      "twitter": "",
+      "type": [
+        "personal"
+      ],
+      "id": 26
+    },
+    {
+      "firstName": "Olya",
+      "lastName": "dorofiychuk",
+      "street": "abbingdon",
+      "city": "London",
+      "email": "",
+      "linkedin": "",
+      "twitter": "",
+      "type": [
+        "work"
+      ],
+      "id": 27
+    }
+  ],
+  "meetings": [
+    {
+      "name": "hello",
+      "location": "home",
+      "date": "2022-12-04",
+      "time": "20:42",
+      "summary": "graduation",
+      "id": 1
+    },
+    {
+      "name": "ky",
+      "location": "home",
+      "date": "2022-12-04",
+      "time": "20:42",
+      "summary": "graduation",
+      "id": 2
+    },
+    {
+      "name": "ky",
+      "location": "home",
+      "date": "2022-12-04",
+      "time": "20:42",
+      "summary": "graduation",
+      "id": 3
+    },
+    {
+      "name": "hello",
+      "location": "home",
+      "date": "2022-12-11",
+      "time": "20:52",
+      "summary": "graduation",
+      "id": 4
+    },
+    {
+      "title": "again",
+      "location": "home",
+      "date": "2022-11-27",
+      "time": "22:06",
+      "summary": "lalala",
+      "contactId": 10,
+      "id": 5
     }
   ]
 }

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+//Initial state for the form
 const initialFormState = {
   firstName: "",
   lastName: "",
@@ -13,15 +14,13 @@ const initialFormState = {
 };
 
 function ContactsAdd(props) {
-  // setContacts and contacts must be passed as props
-  // to this component so new contacts can be added to the
-  // state
   const { setContacts, contacts } = props;
   const [newPerson, setNewPerson] = useState(initialFormState);
   const navigate = useNavigate();
   //TODO: Implement controlled form
   //send POST to json server on form submit
 
+  //Handle submit , prevent refresh, send new contact via POST to our database
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -44,12 +43,14 @@ function ContactsAdd(props) {
       .then((response) => response.json())
       .then((newData) => setContacts({ ...contacts, newData }))
       .then(() => {
-        // navigate("/contacts/${newdata.id}");
+        //After submit navigate to updated contact list
+        navigate("/");
       });
-
+    //reset form after submition
     setNewPerson(initialFormState);
   };
 
+  //Handle change of input
   const handleChange = (event) => {
     const value = event.target.value;
     const name = event.target.name;
@@ -181,7 +182,7 @@ function ContactsAdd(props) {
 
       <div className="actions-section">
         <button className="button blue" type="submit">
-          Create
+          ✔️Create
         </button>
       </div>
     </form>

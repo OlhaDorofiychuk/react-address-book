@@ -155,3 +155,10 @@ h2 {
   display: inline-block;
   text-align: center;
 }
+
+.work {
+  color: red;
+}
+.personal {
+  color: darkgreen;
+}
