@@ -4,7 +4,7 @@ import { Rings } from "react-loader-spinner";
 
 function ContactsView({ contacts, setContacts }) {
   const [contact, setContact] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const location = useLocation();
   const contactUrlId = useParams();
   const navigate = useNavigate();
@@ -27,14 +27,12 @@ function ContactsView({ contacts, setContacts }) {
   }
 
   useEffect(() => {
-    setIsLoading(true);
+    setLoading(true);
     fetch(`http://localhost:4000/contacts/${contactUrlId.id}`)
       .then((res) => res.json())
       .then((singleContactData) => {
-        setTimeout(() => {
-          setContact(singleContactData);
-          setIsLoading(false);
-        }, 2000);
+        setLoading(false);
+        setContact(singleContactData);
       });
   }, [contactUrlId]);
 
@@ -44,7 +42,7 @@ function ContactsView({ contacts, setContacts }) {
 
   return (
     <>
-      {isLoading ? (
+      {loading ? (
         <div className="container">
           <Rings color="#00BFFF" height={300} width={300} />
         </div>

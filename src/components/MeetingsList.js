@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 function MeetingsList(props) {
-  const { meetingsList, setMeetingsList } = props;
+  const { meetings, setMeetings } = props;
   const navigate = useNavigate();
   const { id } = useParams();
   useEffect(() => {
@@ -19,9 +19,6 @@ function MeetingsList(props) {
   return (
     <div>
       <h2>Meetings</h2>
-      {/* <button onClick={() => navigate(-1)} className="btn delete">
-        Back
-      </button> */}
       <ul className="contacts-list meetings">
         {/*meetingsList.map not a function, need to debug this */}
 

@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 
 function ContactEdit({ contacts, setContacts }) {
   const [contactToEdit, setContactToEdit] = useState({});
-  const contactId = useParams;
+  const contactId = useParams();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -39,32 +39,20 @@ function ContactEdit({ contacts, setContacts }) {
     if (name === "twitter") {
       setContactToEdit({ ...contactToEdit, twitter: value });
     }
-    if (name === "type" && type === "checkbox") {
-      return setContactToEdit({
-        ...contactToEdit,
-        type: [...contactToEdit.type, value],
-      });
+    if (name === "type") {
+      return setContactToEdit({ ...contactToEdit, type: value });
     }
   };
 
   const updateTargetContact = async () => {
-    const res = await fetch(`http://localhost:4000/contacts/${contactId.id}`, {
+    const resp = await fetch(`http://localhost:4000/contacts/${contactId.id}`, {
       method: "PATCH",
-      body: JSON.stringify({
-        firstName: contactToEdit.firstName,
-        lastName: contactToEdit.lastName,
-        street: contactToEdit.street,
-        city: contactToEdit.city,
-        email: contactToEdit.email,
-        linkedin: contactToEdit.linkedin,
-        twitter: contactToEdit.twitter,
-        type: contactToEdit.type,
-      }),
+      body: JSON.stringify(contactToEdit),
       headers: {
         "Content-Type": "application/json",
       },
     });
-    return res.json();
+    return resp.json();
   };
 
   const handleSubmit = async (event) => {
@@ -140,7 +128,6 @@ function ContactEdit({ contacts, setContacts }) {
           id="linkedIn"
           name="linkedIn"
           type="text"
-          required
           value={contactToEdit.linkedIn}
           onChange={handleChange}
         />
@@ -150,7 +137,6 @@ function ContactEdit({ contacts, setContacts }) {
           id="twitter"
           name="twitter"
           type="text"
-          required
           value={contactToEdit.twitter}
           onChange={handleChange}
         />
@@ -160,26 +146,24 @@ function ContactEdit({ contacts, setContacts }) {
           <label htmlFor="work">
             Work:
             <input
-              type="checkbox"
+              type="radio"
               id="work"
               name="type"
               value="work"
               checked={contactToEdit.type === "work"}
               onChange={handleChange}
-              required
             />
           </label>
 
           <label htmlFor="personal">
             Personal:
             <input
-              type="checkbox"
+              type="radio"
               id="personal"
               name="type"
               value="personal"
               checked={contactToEdit.type === "personal"}
               onChange={handleChange}
-              required
             />
           </label>
         </div>

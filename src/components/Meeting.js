@@ -13,7 +13,6 @@ function Meeting() {
   };
 
   const [newMeeting, setNewMeeting] = useState(initialFormState);
-  const [meetingsList, setMeetingsList] = useState([]);
   const [contact, setContact] = useState(null);
   const urlPar = useParams();
 

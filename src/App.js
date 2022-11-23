@@ -9,8 +9,9 @@ import Meeting from "./components/Meeting";
 import MeetingsList from "./components/MeetingsList";
 import { Rings } from "react-loader-spinner";
 
-export default function App({ meetingsList, setMeetingsList }) {
+export default function App() {
   const [contacts, setContacts] = useState([]);
+  const [meetings, setMeetings] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   //Request to get all contacts from the database
@@ -55,16 +56,16 @@ export default function App({ meetingsList, setMeetingsList }) {
           <main>
             <Routes>
               <Route path="/" element={<ContactsList contacts={contacts} />} />
-              <Route path="/meetings" element={<MeetingsList />} />
               <Route
-                path="/contacts/:id/meetings"
+                path="/meetings"
                 element={
-                  <Meeting
-                    meetingsList={meetingsList}
-                    setMeetingsList={setMeetingsList}
+                  <MeetingsList
+                    meetingsList={meetings}
+                    setMeetingsList={setMeetings}
                   />
                 }
               />
+              <Route path="/contacts/:id/meetings" element={<Meeting />} />
               <Route
                 path="/contacts/add"
                 element={
